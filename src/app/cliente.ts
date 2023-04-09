@@ -3,4 +3,7 @@ export class Cliente {
     nombre: String;
     apellido: String;
     email: String;
+    telefono:number;
+    direccion: String;
+
 }
