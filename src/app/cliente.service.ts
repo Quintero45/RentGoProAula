@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
 import { Observable } from 'rxjs';
@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ClienteService {
+export class ClienteService  {
   private baseURL = 'http://localhost:8080/cliente/clientes';
 
 
@@ -32,5 +32,7 @@ export class ClienteService {
   eliminarCliente(id:string):Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
+
+ 
 
 }

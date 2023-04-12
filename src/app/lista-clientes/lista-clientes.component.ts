@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-clientes',
@@ -9,16 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista-clientes.component.css']
 })
 export class ListaClientesComponent implements OnInit {
-
+ 
+  
   clientes:Cliente[];
 
-  constructor(private clienteServicio : ClienteService , private router:Router) {}
+  constructor(private clienteServicio : ClienteService , private router:Router , private route:ActivatedRoute) {}
+  filterUser=''
 
 
   ngOnInit(): void {
     this.obtenerClientes();
-
   }
+  
+
 
   actualizarCliente(cliente:Cliente){
     this.router.navigate(['/actualizar-cliente',cliente]);
@@ -39,5 +42,7 @@ export class ListaClientesComponent implements OnInit {
       this.clientes = dato;
     });
   }
+
+
 
 }

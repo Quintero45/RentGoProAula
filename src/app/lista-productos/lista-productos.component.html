@@ -1,0 +1,24 @@
+<h2>Lista de Productos</h2>
+<div class="form-gropup">
+   
+</div>
+<table class="table table-striped table-bordered">
+    <thead class="table-primary">
+        <tr>
+            <th>Nombre</th>
+            <th>Id Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor= "let producto of productos">
+            <td>{{producto.nombreproducto}}</td>
+            <td>{{producto.idproducto}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.precio}}</td>
+        </tr>
+    </tbody> 
+</table>
+
