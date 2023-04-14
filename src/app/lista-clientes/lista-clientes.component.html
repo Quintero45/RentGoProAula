@@ -1,36 +1,49 @@
 <h2>Lista de Clientes</h2>
 <div class="form-gropup">
-    <form >
-        <input type="text" class="form-control" id="code" name="filterUser" placeholder="Search..."[(ngModel)]="filterUser">
-    </form>
-   
+  <form>
+    <input
+      type="text"
+      class="form-control"
+      id="code"
+      name="filterUser"
+      placeholder="Buscar id..."
+      [(ngModel)]="filterUser"
+    />
+  </form>
+  <br />
 </div>
 <table class="table table-striped table-bordered">
-    <thead class="table-primary">
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Telefono</th>
-            <th>Direccion</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody >
-        <tr *ngFor= "let cliente  of clientes | filter:filterUser ">
-            <td>{{cliente.id}}</td>
-            <td>{{cliente.nombre}}</td>
-            <td>{{cliente.apellido}}</td>
-            <td>{{cliente.email}}</td>
-            <td>{{cliente.telefono}}</td>
-            <td>{{cliente.direccion}}</td>
-            <td>
-                <button (click)="actualizarCliente(cliente)"   class="btn btn-primary">Editar</button>
-                <button (click)="eliminarCliente(cliente.id)"   class="btn btn-danger" style="margin-left : 20px">Eliminar</button>
-            </td>
-        </tr>
-
-    </tbody>
+  <thead class="table-primary">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes | filter : filterUser">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.apellido }}</td>
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.telefono }}</td>
+      <td>{{ cliente.direccion }}</td>
+      <td>
+        <button (click)="actualizarCliente(cliente)" class="btn btn-primary">
+          Editar
+        </button>
+        <button
+          (click)="eliminarCliente(cliente.id)"
+          class="btn btn-danger"
+          style="margin-left: 20px"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
-
