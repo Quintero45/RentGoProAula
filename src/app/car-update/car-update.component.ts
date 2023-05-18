@@ -8,36 +8,41 @@ import { CarService } from '../car.service';
   templateUrl: './car-update.component.html',
   styleUrls: ['./car-update.component.css']
 })
-export class CarUpdateComponent implements OnInit{
+export class CarUpdateComponent implements OnInit {
 
-  plate:string;
+  plate: string;
   car: Car = new Car();
-  constructor(private carServicio:CarService , private router:Router,private route:ActivatedRoute){}
 
+  constructor(
+    private carServicio: CarService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.plate =  this.route.snapshot.params['plate'];
-    this.carServicio.GetCar(this.plate).subscribe(dato =>{
-      this.car = dato;
-    },error => console.log(error));
+    this.plate = this.route.snapshot.params['plate'];
+    this.carServicio.GetCar(this.plate).subscribe(
+      (dato) => {
+        this.car = dato;
+      },
+      (error) => console.log(error)
+    );
   }
 
-
-
-
-  goToCarList(){
+  goToCarList() {
     this.router.navigate(['all/cars']);
   }
 
 
-
-  onSubmit(){
-    this.carServicio.CarUpdate(this.car).subscribe(dato => {
-      this.goToCarList();
-    })
+  onSubmit() {
+    this.carServicio.CarUpdate(this.car).subscribe(
+      (dato) => {
+        this.goToCarList();
+      },
+      (error) => {
+        console.log(error);
+        // Manejar el error de actualización si es necesario
+      }
+    );
   }
-
-
-
-
 }

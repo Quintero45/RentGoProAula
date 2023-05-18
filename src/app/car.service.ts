@@ -22,15 +22,15 @@ CarRegister(car:Car):Observable<Object>{
 }
 
 CarUpdate(car:Car):Observable<Object>{
-  return this.httpClient.put(`${this.baseURL}/${'update_car'}`,car);
+  return this.httpClient.put(`${this.baseURL}${'update_car'}`,car);
 }
 
 GetCar(plate:string):Observable<Car>{
-  return this.httpClient.get<Car>(`${this.baseURL}/${plate}`);
+  return this.httpClient.get<Car>(`${this.baseURL}${'get_car'}/${plate}`);
 }
 
 CarDelete(plate:string):Observable<Object>{
-  return this.httpClient.delete(`${this.baseURL}/${plate}`);
+  return this.httpClient.delete(`${this.baseURL}${'delete_car'}/${plate}`);
 }
 
 
