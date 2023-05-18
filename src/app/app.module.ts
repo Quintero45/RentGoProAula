@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from './filter.pipe';
-import { CarListComponent } from './car-list/car-list.component';
-import { CarRegisterComponent } from './car-register/car-register.component';
-import { CarUpdateComponent } from './car-update/car-update.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { CarListComponent } from './components/car-list/car-list.component';
+import { CarRegisterComponent } from './components/car-register/car-register.component';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
 
 
 

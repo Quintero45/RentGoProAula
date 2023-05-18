@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarListComponent } from './car-list/car-list.component';
-import { CarRegisterComponent } from './car-register/car-register.component';
-import { CarUpdateComponent } from './car-update/car-update.component';
+import { CarListComponent } from './components/car-list/car-list.component';
+import { CarRegisterComponent } from './components/car-register/car-register.component';
+import { CarUpdateComponent } from './components/car-update/car-update.component';
 
 
 
