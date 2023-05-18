@@ -38,32 +38,5 @@ export class CarListComponent implements OnInit {
       this.cars = dato;
     });
   }
-  /*
-  swal
-  CarRegister(plate: string){
-      swal({
-        title: "¿Estas seguro?",
-        text:"Confirma si deseas guardar el vehiculo",
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, guardar',
-        cancelButtonText: 'No, cancelar',
-        confirmButtonClass: 'btn btn-success',
-        cancelButtonClass: 'btn btn-danger',
-        buttonsStyling: true
-      }).then((result) => {
-        this.carServicio.CarRegister(plate).subscribe(dato => {
-          console.log(dato);
-          this.getCars();
-          swal(
-            'Carro guardado',
-            'El carro ha sido guardado con exito',
-            'success'
-          )
-    })
 
-    }
-  }*/
 }
