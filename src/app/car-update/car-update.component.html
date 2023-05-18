@@ -1,0 +1,55 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Update Car</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label >plate : </label>
+      <input type="text"
+      class="form-control"
+      id="plate"
+      [(ngModel)] ="car.plate" name="plate">
+  </div>
+
+      <div class="form-group">
+          <label >Model : </label>
+          <input type="text"
+          class="form-control"
+          id="model"
+          [(ngModel)] ="car.model" name="model">
+      </div>
+
+      <div class="form-group">
+          <label>Brand : </label>
+          <input type="text"
+          class="form-control"
+          id="brand"
+          [(ngModel)] ="car.brand" name="brand">
+      </div>
+
+      <div class="form-group">
+        <label>year : </label>
+        <input type="text"
+        class="form-control"
+        id="year"
+        [(ngModel)] ="car.year" name="year">
+    </div>
+
+      <div class="form-group">
+        <label>Type : </label>
+        <input type="text"
+        class="form-control"
+        id="type"
+        [(ngModel)] ="car.type" name="type">
+    </div>
+
+    <div class="form-group">
+      <label>BasePrice : </label>
+      <input type="text"
+      class="form-control"
+      id="basePrice"
+      [(ngModel)] ="car.basePrice" name="basePrice">
+  </div>
+
+      <button class="btn btn-outline-warning">Update</button>
+
+  </form>
+</div>

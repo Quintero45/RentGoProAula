@@ -7,18 +7,18 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any, ...arg: any[]): any {
     const resultado=[];
-    for(const persona of value) {
-      if(persona.id.toLowerCase().indexOf(arg)>-1 ){
-        resultado.push(persona);
+    for(const car of value) {
+      if(car.plate.toLowerCase().indexOf(arg)>-1 ){
+        resultado.push(car);
       };
-    
+
     };
-    
+
 
 
     return resultado;
 
-    
+
   }
 
 

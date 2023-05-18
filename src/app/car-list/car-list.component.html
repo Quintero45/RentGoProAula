@@ -1,0 +1,49 @@
+<h2>Car List</h2>
+<div class="form-gropup">
+  <form>
+    <input
+      type="text"
+      class="form-control"
+      id="code"
+      name="filterCar"
+      placeholder="Search Plate .. ."
+      [(ngModel)]="filterCar"
+    />
+  </form>
+  <br />
+</div>
+<table class="table table-striped table-bordered">
+  <thead class="table-primary">
+    <tr>
+      <th>Plate</th>
+      <th>Model</th>
+      <th>Brand</th>
+      <th>Year</th>
+      <th>Type</th>
+      <th>BasePrice</th>
+      <th>Acction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars | filter : filterCar">
+      <td>{{ car.plate}}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.year }}</td>
+      <td>{{ car.type }}</td>
+      <td>{{ car.basePrice }}</td>
+      <td>
+        <button (click)="CarUpdate(car)" class="btn btn-primary">
+          Editar
+        </button>
+        <button
+          (click)="CarDelete(car.plate)"
+          class="btn btn-danger"
+          style="margin-left: 20px"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
