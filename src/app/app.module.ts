@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipe/filter.pipe';
-import { CarListComponent } from './components/car-list/car-list.component';
-import { CarRegisterComponent } from './components/car-register/car-register.component';
-import { CarUpdateComponent } from './components/car-update/car-update.component';
+import { CarListComponent } from './components/crud-car/car-list/car-list.component';
+import { CarRegisterComponent } from './components/crud-car/car-register/car-register.component';
+import { CarUpdateComponent } from './components/crud-car/car-update/car-update.component';
+import { CommonModule } from '@angular/common';
+import { ArchivosHomeComponent } from './components/crud-archivos/archivos-home/archivos-home.component';
+import { ArchivoUpdateComponent } from './components/crud-archivos/archivo-update/archivo-update.component';
+
 
 
 
@@ -19,13 +23,16 @@ import { CarUpdateComponent } from './components/car-update/car-update.component
     FilterPipe,
     CarListComponent,
     CarRegisterComponent,
-      CarUpdateComponent
+    CarUpdateComponent,
+    ArchivosHomeComponent,
+    ArchivoUpdateComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
 
   ],
   providers: [

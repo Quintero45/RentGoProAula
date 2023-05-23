@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from '../../model/car';
+import { Car } from '../../../model/car';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CarService } from '../../services/car.service';
+import { CarService } from '../../../services/car.service';
 
 @Component({
   selector: 'app-car-register',
